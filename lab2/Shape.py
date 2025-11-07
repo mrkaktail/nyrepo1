@@ -1,7 +1,8 @@
 class Shape:
+    
     def __init__(self, x=0, y=0):
         if not isinstance(x, (float, int)) or not isinstance(y, (float, int)): # if input is not a number
-            raise ValueError("x and y must be numbers")
+            raise TypeError("x and y must be numbers")
         self.x = x
         self.y = y
         print(f"created shape on x:{self.x} y:{self.y}")
