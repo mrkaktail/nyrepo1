@@ -44,6 +44,11 @@ class Circle(Shape):
         self.CircleCheck(other)
         return self.area >= other.area 
     
+    def UnitCircleCheck(self):
+        if self.radius == 1 and self.x == 0 and self.y == 0:
+            return True
+        return False
+    
 #circ1 = Circle(5, 2, 6)
 
 #circ1
