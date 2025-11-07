@@ -1,5 +1,14 @@
 class Shape:
-    
+    """
+    Superclass for 2 dimensional shapes.
+
+    Attributes:
+    x: x-cordinate of shapes center.
+    y: y-cordinate of shapes center.
+
+    Methods: 
+    translate(xstep, ystep): move shape from its current position by x and y steps. 
+    """
     def __init__(self, x=0, y=0):
         if not isinstance(x, (float, int)) or not isinstance(y, (float, int)): # if input is not a number
             raise TypeError("x and y must be numbers")

@@ -1,5 +1,25 @@
 from Shape import Shape
 from math import pi
+"""
+Class representing a circle on a 2D (x,y) plane
+
+Attributes: 
+radius: representing the radius of given circle
+x: x-cordinate of circles center
+y: y-cordinate of circles center
+
+Properties:
+area: The area of given circle (read-only)
+perimeter: The perimeter(circumference) of given circle (read-only)
+
+Methods:
+CircleCheck: Checks if object passed to this comparison is a circle, raises a TypeError if not.
+UnitCircleCheck: Checks if given circle is a unit circle by returning True if radius=1 and (x,y)cordinates are (0,0)
+
+Overloaded comparison operators:
+Compares areas of circles with (==,<,>,<=,>=) operators
+
+"""
 
 class Circle(Shape):
     def __init__(self, radius, x=0, y=0):
