@@ -28,7 +28,7 @@ class Rectangle(Shape):
         super().__init__(x,y)
         if not isinstance(width,(float,int)) or not isinstance(length,(float, int)): #executes if the values are numeric at runtime
             raise TypeError("Width and height must be numbers (float or int)")
-        if width <= 0 or length <= 0: 
+        if width <= 0 or length <= 0:
             raise ValueError("Length & Width must be bigger than 0") #value of arg error
         self.width = width
         self.length = length
@@ -38,7 +38,7 @@ class Rectangle(Shape):
         if self.width == self.length:
             return True
         return False
-    
+
     #Checks if two objects can be compared
     def _check_if_comparible(self, other):
         if not isinstance(other, Rectangle):
@@ -72,4 +72,4 @@ class Rectangle(Shape):
     
     def __ge__(self, other):
         self._check_if_comparible(other)
-        return self.area >= other.area
+        return self.area >= other.area 

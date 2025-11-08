@@ -3,7 +3,7 @@ from math import pi
 """
 Class representing a circle on a 2D (x,y) plane
 
-Attributes: 
+Attributes:
     radius: representing the radius of given circle
     x: x-cordinate of circles center
     y: y-cordinate of circles center
@@ -26,12 +26,12 @@ class Circle(Shape):
     def __init__(self, radius:float, x:float=0.0, y:float=0.0):
         super().__init__(x,y)
         if not isinstance(radius, (float, int)):
-            raise TypeError("Radius must be a number") 
+            raise TypeError("Radius must be a number")
         if radius <= 0: 
             raise ValueError("Radius must be bigger than 0")
         self.radius = radius
 
-    #Area and perimeter properties
+    #Area and perimeter properties 
     @property
     def area(self):
         return pi * (self.radius ** 2)
@@ -43,7 +43,7 @@ class Circle(Shape):
     #Cheks if instance is a circle
     def _circle_check(self, other):
         if not isinstance(other, Circle):   #to avoid DRY repeating line on each operator overload
-            raise TypeError("only Circles can be compared")    
+            raise TypeError("only Circles can be compared")  
     
     #Operator overloading
     def __eq__(self, other):
@@ -67,7 +67,7 @@ class Circle(Shape):
         return self.area >= other.area 
     
     #Checks if instance is a unit circle
-    def unit_circle_check(self) -> bool:
+    def unit_circle_check(self) -> bool: 
         if self.radius == 1 and self.x == 0 and self.y == 0:
             return True
         return False

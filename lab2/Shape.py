@@ -20,7 +20,7 @@ class Shape:
     #Moving the object
     def translate(self, xstep:float, ystep:float):
         if not isinstance(xstep, (float, int)) or not isinstance(ystep, (float, int)): #checks at runtime if input is not a number
-            raise TypeError("x(x-path) and y(y-path) must be numbers")
+            raise TypeError("x(x-step) and y(y-) must be numbers")
         self.x += xstep
         self.y += ystep
 
